@@ -222,8 +222,8 @@ int practice_03() {
 std::vector<std::vector<int>> change_score_value(std::vector<std::vector<int>> student_mark_vector) {
 	/// 将低于 60 的改成 60
 	std::cout << "..in chane_score_value::change mark less than 60 to 60..." << std::endl;
-	for (std::vector<int> single_stu_mark : student_mark_vector) {
-		for (int single_mark : single_stu_mark) {
+	for (std::vector<int> & single_stu_mark : student_mark_vector) {
+		for (int & single_mark : single_stu_mark) {
 			if (single_mark < 60)
 				single_mark = 60;	// 这里改不了值，为什么
 		}
@@ -272,5 +272,21 @@ int change_score_reference(std::vector<std::vector<int>>& student_mark_vector) {
 
 D:\W_workPlace\bxg_cpp\day02\build\Debug\day02_normal_practice.exe (process 19188) exited with code 0.
 Press any key to close this window . . .
+
+范围for 遍历时 用 & 来修改值
+
+	for (std::vector<int> & single_stu_mark : student_mark_vector) {	// 这里有个 &
+		for (int & single_mark : single_stu_mark) {						// 这里有个 &
+			if (single_mark < 60)
+				single_mark = 60;	// 这里改不了值，为什么
+		}
+	}
+
+..for student[0] :: 100 90      60      79      80      60
+..for student[1] :: 60  69      78      89      91      60
+..for student[2] :: 60  79      89      91      80      89
+..for student[0] :: 100 90      59      79      80      27
+..for student[1] :: 30  69      78      89      91      40
+..for student[2] :: 50  79      89      91      80      89
 
 */

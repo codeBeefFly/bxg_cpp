@@ -21,9 +21,21 @@ g. 超纲： 应该要考虑引用，否则更新的操作无法实现。具体
 */
 
 #include <iostream>
+#include "basic_operation.h"
+
 
 int main() {
 	std::cout << "..day02_homework_03_marks..." << std::endl;
+
+	std::vector<std::vector<int>> score_vector;		// // empty vector of ints
+
+	initScore(score_vector);
+
+	printScore(score_vector);
+
+	updateScore(score_vector);
+
+	printScore(score_vector);
 
 	return 0;
 }
