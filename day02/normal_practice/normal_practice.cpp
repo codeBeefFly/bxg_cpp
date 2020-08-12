@@ -5,11 +5,15 @@ int practice_01();
 int practice_02();
 int practice_03();
 
+// function overloading, 这样好像不行, 参数只是引用或值传递不能实现函数重载
+std::vector<std::vector<int>> change_score_value(std::vector<std::vector<int>> student_mark_vector);
+int change_score_reference(std::vector<std::vector<int>>& student_mark_vector);
 
 int main(){
 
 	//practice_01();		// not finished
-	practice_02();		
+	//practice_02();		
+	practice_03();		
 
 	return 0;
 }
@@ -114,12 +118,113 @@ int practice_03() {
 	
 	{
 		/// 需求
-		///有一个装有6个学科分数的vector，请把这个vector传给另一个函数 change_score()函数，
+		///有一个装有三个学生6个学科分数的vector，请把这个vector传给另一个函数 change_score()函数，
 		///在该函数内部 请使用** 基于范围的for循环** 对 vector进行遍历，
 		///把vector里面所有低于60分的分数，修改为：100分。
 
 	}
 
+	{	/// 使用二维数组形式
+		int student_mark_array[3][6]{
+			{100, 90, 59, 79, 80, 27},
+			{30, 69, 78, 89, 91, 40},
+			{50, 79, 89, 91, 80, 89},
+		};
+
+	}
+
+	{	/// 使用vector-vector形式
+		std::vector<std::vector<int>> student_mark_vector{
+			{ 100, 90, 59, 79, 80, 27},
+			{ 30, 69, 78, 89, 91, 40 },
+			{ 50, 79, 89, 91, 80, 89 },
+		};
+
+		std::vector<int> total_mark;
+		std::vector<int> avg_mark;
+
+		/// <summary> 这个怎么弄出来的？
+		/// 计算 total, avg
+		/// </summary>
+		/// <returns></returns>
+		int tmp_total{ 0 }, tmp_avg{ 0 }, student_index{ 0 };
+		std::cout << "..calculate total and avg. marks for each student, before modification..." << std::endl;
+		for (std::vector<int> single_stu_mark : student_mark_vector) {
+			tmp_total = 0;
+			tmp_avg = 0;
+			student_index++;
+			for (int single_mark : single_stu_mark) {
+				tmp_total += single_mark;
+			}
+			tmp_avg = tmp_total / 6;
+			total_mark.push_back(tmp_total);
+			avg_mark.push_back(tmp_avg);
+			std::cout << "..total mark for student[" << student_index << "] :: " << tmp_total << "\n"
+				<< "..avg mark for student[" << student_index << "] :: " << tmp_avg << "\n";
+		}
+
+		/// 将低于 60 的改成 60
+		std::cout << "..calculate total and avg. marks for each student, after modification..." << std::endl;
+		student_index = 0;
+		for (std::vector<int> single_stu_mark : student_mark_vector) {
+			tmp_total = 0;
+			tmp_avg = 0;
+			student_index++;
+			for (int single_mark : single_stu_mark) {
+				if (single_mark < 60)
+					single_mark = 60;
+				tmp_total += single_mark;
+			}
+			tmp_avg = tmp_total / 6;
+			total_mark.push_back(tmp_total);
+			avg_mark.push_back(tmp_avg);
+			std::cout << "..total mark for student[" << student_index << "] :: " << tmp_total << "\n"
+				<< "..avg mark for student[" << student_index << "] :: " << tmp_avg << "\n";
+		}
+	}
+
+	{	///练习vector做参数 
+		std::cout << "..in pass vector to function practice...\n";
+		std::vector<std::vector<int>> student_mark_vector{
+			{ 100, 90, 59, 79, 80, 27},
+			{ 30, 69, 78, 89, 91, 40 },
+			{ 50, 79, 89, 91, 80, 89 },
+		};
+
+		std::vector<std::vector<int>> student_mark_vector_modified;
+		student_mark_vector_modified = change_score_value(student_mark_vector);
+
+	}
+
+
 	return 0;
 }
 
+std::vector<std::vector<int>> change_score_value(std::vector<std::vector<int>> student_mark_vector) {
+	/// 将低于 60 的改成 60
+	std::cout << "..calculate total and avg. marks for each student, after modification..." << std::endl;
+	std::vector<int> total_mark{ 0 }, avg_mark{ 0 };
+	int student_index{ 0 }, tmp_total{ 0 }, tmp_avg{ 0 };
+	for (std::vector<int> single_stu_mark : student_mark_vector) {
+		tmp_total = 0;
+		tmp_avg = 0;
+		student_index++;
+		for (int single_mark : single_stu_mark) {
+			if (single_mark < 60)
+				single_mark = 60;
+			tmp_total += single_mark;
+		}
+		tmp_avg = tmp_total / 6;
+		total_mark.push_back(tmp_total);
+		avg_mark.push_back(tmp_avg);
+		std::cout << "..total mark for student[" << student_index << "] :: " << tmp_total << "\n"
+			<< "..avg mark for student[" << student_index << "] :: " << tmp_avg << "\n";
+	}
+
+	return student_mark_vector;
+}
+
+int change_score_reference(std::vector<std::vector<int>>& student_mark_vector) {
+
+	return 0;
+}
