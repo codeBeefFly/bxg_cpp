@@ -193,38 +193,84 @@ int practice_03() {
 
 		std::vector<std::vector<int>> student_mark_vector_modified;
 		student_mark_vector_modified = change_score_value(student_mark_vector);
+		change_score_reference(student_mark_vector);
 
+		// 打印，使用基于范围的for循环
+		int student_index{ 0 };
+		for (std::vector<int> single_student_mark : student_mark_vector_modified) {
+			std::cout << "..for student[" << student_index << "] :: ";
+			student_index++;
+			for (int mark : single_student_mark) {
+				std::cout << mark << "\t";
+			}
+			std::cout << "\n";
+		}
+
+		student_index = 0;
+		for (std::vector<int> single_student_mark : student_mark_vector) {
+			std::cout << "..for student[" << student_index << "] :: ";
+			student_index++;
+			for (int mark : single_student_mark) {
+				std::cout << mark << "\t";
+			}
+			std::cout << "\n";
+		}
 	}
-
-
 	return 0;
 }
 
 std::vector<std::vector<int>> change_score_value(std::vector<std::vector<int>> student_mark_vector) {
 	/// 将低于 60 的改成 60
-	std::cout << "..calculate total and avg. marks for each student, after modification..." << std::endl;
-	std::vector<int> total_mark{ 0 }, avg_mark{ 0 };
-	int student_index{ 0 }, tmp_total{ 0 }, tmp_avg{ 0 };
+	std::cout << "..in chane_score_value::change mark less than 60 to 60..." << std::endl;
 	for (std::vector<int> single_stu_mark : student_mark_vector) {
-		tmp_total = 0;
-		tmp_avg = 0;
-		student_index++;
 		for (int single_mark : single_stu_mark) {
 			if (single_mark < 60)
-				single_mark = 60;
-			tmp_total += single_mark;
+				single_mark = 60;	// 这里改不了值，为什么
 		}
-		tmp_avg = tmp_total / 6;
-		total_mark.push_back(tmp_total);
-		avg_mark.push_back(tmp_avg);
-		std::cout << "..total mark for student[" << student_index << "] :: " << tmp_total << "\n"
-			<< "..avg mark for student[" << student_index << "] :: " << tmp_avg << "\n";
 	}
-
 	return student_mark_vector;
 }
 
 int change_score_reference(std::vector<std::vector<int>>& student_mark_vector) {
-
+	/// 将低于 60 的改成 60
+	std::cout << "..in chane_score_reference::change mark less than 60 to 60..." << std::endl;
+	for (std::vector<int> single_stu_mark : student_mark_vector) {
+		for (int single_mark : single_stu_mark) {
+			if (single_mark < 60)
+				single_mark = 60;	// 这里改不了值，为什么
+		}
+	}
 	return 0;
 }
+
+/*
+
+..in day02 practice_03...
+..calculate total and avg. marks for each student, before modification...
+..total mark for student[1] :: 435
+..avg mark for student[1] :: 72
+..total mark for student[2] :: 397
+..avg mark for student[2] :: 66
+..total mark for student[3] :: 478
+..avg mark for student[3] :: 79
+..calculate total and avg. marks for each student, after modification...
+..total mark for student[1] :: 469
+..avg mark for student[1] :: 78
+..total mark for student[2] :: 447
+..avg mark for student[2] :: 74
+..total mark for student[3] :: 488
+..avg mark for student[3] :: 81
+..in pass vector to function practice...
+..in chane_score_value::change mark less than 60 to 60...
+..in chane_score_reference::change mark less than 60 to 60...
+..for student[0] :: 100 90      59      79      80      27
+..for student[1] :: 30  69      78      89      91      40
+..for student[2] :: 50  79      89      91      80      89
+..for student[0] :: 100 90      59      79      80      27
+..for student[1] :: 30  69      78      89      91      40
+..for student[2] :: 50  79      89      91      80      89
+
+D:\W_workPlace\bxg_cpp\day02\build\Debug\day02_normal_practice.exe (process 19188) exited with code 0.
+Press any key to close this window . . .
+
+*/
