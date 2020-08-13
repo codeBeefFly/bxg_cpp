@@ -7,7 +7,7 @@ int initScore(std::vector<student*> & stu_vector) {
 	
 	// 使用脚标for进行成绩输入
 	for (int i = 0; i < 3; i++) {
-		student* stu = new student;		// 在堆内存创建一个student类型对象，并用*stu指针指向这个内存空间
+		student* stu = new student;		// 在堆内存创建一个student类型对象，并用*stu指针指向这个内存空间，记住要在上级程序中释放堆空间
 		
 		std::cout << "..enter student [" << i + 1 << "]'s name :: ";
 		std::cin >> (*stu).name;		// 指针解引用，得到student对象，对象.对象成员

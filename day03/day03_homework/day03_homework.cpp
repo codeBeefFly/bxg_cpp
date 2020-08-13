@@ -48,5 +48,10 @@ int main() {
 	// 打印成绩
 	printScore(stu_vector);
 
+	// 释放 在堆中创建的 student 对象空间；这一步很重要
+	for (student* stu : stu_vector) {
+		delete stu;
+	}
+
 	return 0;
 }
