@@ -8,3 +8,7 @@ add_executable(day03_int_array_score day03_practice/int_array_score.cpp)
 
 # 第三天打卡作业
 # add_executable()
+add_executable(
+	day03_homework 
+	day03_homework/day03_homework.cpp
+	day03_homework/stu.cpp)
