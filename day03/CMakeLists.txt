@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 14)
 # 第三天练习
 add_executable(day03_int_array_score day03_practice/int_array_score.cpp)
 add_executable(day03_pointer_vector day03_practice/day03_pointer_vector/vector_pointer.cpp)
+add_executable(day03_double_pointer day03_double_pointer/double_pointer.cpp)
+add_executable(day03_vector_name day03_vector_name/vector_name.cpp)
 
 
 # 第三天打卡作业

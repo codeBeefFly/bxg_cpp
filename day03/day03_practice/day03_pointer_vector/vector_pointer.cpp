@@ -26,7 +26,7 @@ int main() {
 
 	std::vector<student> * student_vector;
 
-	createContainer(student_vector);
+	createContainer(&student_vector);
 	
 	student stu_a;
 	stu_a.name = "jacob";
@@ -38,6 +38,16 @@ int main() {
 	stu_c.name = "king";
 
 
+	(*student_vector).push_back(stu_a);
+	(*student_vector).push_back(stu_b);
+	(*student_vector).push_back(stu_c);
+
+
+	// ´òÓ¡
+	for (student s : (*student_vector)) {
+		std::cout << "..student name :: " << s.name << "\t";
+	}
+
 
 	return 0;
 }
@@ -45,6 +55,6 @@ int main() {
 
 void createContainer(std::vector<student> ** student_vector) {
 
-	
+	*student_vector = new std::vector<student>;
 
 }
