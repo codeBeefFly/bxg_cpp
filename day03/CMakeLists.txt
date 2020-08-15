@@ -11,6 +11,7 @@ add_executable(day03_vector_name day03_vector_name/vector_name.cpp)
 add_executable(day03_function_basic day03_pointer_function/function_basic.cpp)
 add_executable(day03_function_pointer day03_pointer_function/function_pointer.cpp)
 add_executable(day03_function_pointer_argument day03_pointer_function/function_pointer_argument.cpp)
+add_executable(day03_function_pointer_argument_2 day03_pointer_function/function_pointer_argument_2.cpp)
 
 
 # 第三天打卡作业

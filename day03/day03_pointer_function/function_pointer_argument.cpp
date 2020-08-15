@@ -49,7 +49,7 @@ int add(int a, int b) {
 
 // 定义含有函数指针的函数
 // a, b 形参作为函数指针的形参 
-int calc(int a, int b, int(*fun_ptr)(int, int)) {
+int calc(int a, int b, int (*fun_ptr)(int, int)) {
 	return fun_ptr(a, b);
 }
 
