@@ -24,6 +24,7 @@
 // 客户端打印函数
 void printScore_0(std::vector<int>);
 void printScore_1(std::vector<int>);
+void printScore_2(std::vector<int>);
 
 
 // 程序提供的打印api
@@ -40,6 +41,9 @@ int main() {
 	// 客户1使用他们的方法使用程序api打印
 	print_api(scores, printScore_1);
 
+
+	// 客户2使用他们的方法使用程序api打印
+	print_api(scores, printScore_2);
 
 	return 0;
 }
@@ -59,6 +63,16 @@ void printScore_1(std::vector<int> score_vector) {
 		<< "..scores ::\t";
 	for (int score : score_vector) {
 		std::cout << score << "\t";
+	}
+}
+
+
+void printScore_2(std::vector<int> score_vector) {
+	std::cout << "\n..in printScore_2...\n"
+		<< "..scores ::\t";
+	// 使用下标打印
+	for (int i = 0; i < score_vector.size(); i++) {
+		std::cout << score_vector[i] << "\t";
 	}
 }
 
