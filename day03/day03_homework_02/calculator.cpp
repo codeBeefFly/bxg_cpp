@@ -66,7 +66,7 @@ int main() {
 		{
 		case 1:
 			fptr = op_add;
-			std::cout << a << " + " << b << " = " << operator_api(a, b, fptr);
+			std::cout << a << " + " << b << " = " << operator_api(a, b, op_add);
 			break;
 		case 2:
 			fptr = op_sub;

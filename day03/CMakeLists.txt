@@ -26,6 +26,12 @@ add_executable(
 	day03_homework_calculator
 	day03_homework_02/calculator.cpp
 )
+
+
+add_executable(
+	day03_homework_calculator_02
+	day03_homework_02/calculator_02.cpp
+)
 	
 # typedef 练习
 add_executable(day03_typedef_00 day03_typedef/typedef_00.cpp)
