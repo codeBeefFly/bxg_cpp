@@ -65,10 +65,12 @@ void initStudent(
 	std::vector<student*>* student_vector	
 );
 
-// 定义更新相关的函数
-void updateToSeventy();
-void updateToEighty();
-void updateToNinety();
+
+// 定义更新相关的函数，可以使用指针，也可以使用引用
+void updateToSeventy(int* score);
+void updateToEighty(int* score);
+void updateToNinety(int* score);
+
 
 // 定义打印相关的函数
 void printForIndex(std::vector<student*>* student_vector);
@@ -88,7 +90,25 @@ int main() {
 	initScore(student_vector, initStudent);	// 函数名称=函数的地址				    
 
 	// 4. 更新成绩	 
-	//updateScore(student_vector);
+	std::cout << "..选择更新的成绩：1. 70，2. 80，3. 90 ::\t";
+	int update_choice;
+	std::cin >> update_choice;
+
+	switch (update_choice)
+	{
+	case 1:
+		updateScore(student_vector, updateToSeventy);
+		break;
+	case 2:
+		updateScore(student_vector, updateToEighty);
+		break;
+	case 3:
+		updateScore(student_vector, updateToNinety);
+		break;
+	default:
+		std::cout << "..输入错误...\n";
+		break;
+	}
 
 	// 5. 打印成绩
 	std::cout << "..选择打印方式：1. 基于范围，2. 基于脚标 ::\t";
@@ -163,9 +183,11 @@ void printForIndex(std::vector<student*>* student_vector) {
 		std::cout << "...学生姓名:: " << (*stu_ptr).name << "\n";
 		std::cout << "...学生学号:: " << (*stu_ptr).id << "\n";
 
+		std::cout << "...学生的成绩::\t";
 		for (int j = 0; j < (*stu_ptr).score_vector.size(); j++) {
-			std::cout << "...学科[" << j + 1 << "]成绩:: " << (*stu_ptr).score_vector.at(j) << "\n";
+			std::cout << (*stu_ptr).score_vector.at(j) << "\t";
 		}
+		std::cout << "\n";
 	}
 }
 
@@ -182,10 +204,26 @@ void printForRange(std::vector<student*>* student_vector) {
 		std::cout << "...学生学号:: " << (*stu_ptr).id << "\n";
 
 		int subject_index{ 0 };
+		std::cout << "...学生的成绩::\t";
 		for (int score : (*stu_ptr).score_vector) {
-			std::cout << "...学科[" << subject_index + 1 << "]成绩:: " << (*stu_ptr).score_vector.at(subject_index) << "\n";
+			std::cout << (*stu_ptr).score_vector.at(subject_index) << "\t";
 			subject_index++;
 		}
-
+		std::cout << "\n";
 	}
+}
+ 
+
+void updateToSeventy(int* score) {
+	*score = 70;
+}
+
+
+void updateToEighty(int* score) {
+	*score = 80;
+}
+
+
+void updateToNinety(int* score) {
+	*score = 90;
 }

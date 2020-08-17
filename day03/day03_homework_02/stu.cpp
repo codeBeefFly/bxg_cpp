@@ -66,8 +66,14 @@ void initScore(	// 函数指针作为参数形式1
 	}
 }
 
-void updateScore(std::vector<student*>* student_vector) {
-
+void updateScore(std::vector<student*>* student_vector, void (*update_ptr)(int*)) {
+	for (student* student : (*student_vector)) {
+		for (int& score : (*student).score_vector) {	// 使用引用就可以修改vector中的元素值
+			if (score < 60) {
+				update_ptr(&score);
+			}
+		}
+	}
 }
 
 void printScore(std::vector<student*>* student_vector, void (*print_ptr)(std::vector<student*>*)) {

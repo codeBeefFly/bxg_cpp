@@ -28,6 +28,6 @@ void initScore(
 		)
 );
 
-void updateScore(std::vector<student*>*);
+void updateScore(std::vector<student*>*, void (*update_ptr)(int*));		// ´«µÝÈÝÆ÷+º¯ÊýÖ¸Õë
 
 void printScore(std::vector<student*>*, void (*print_ptr)(std::vector<student*>*));
