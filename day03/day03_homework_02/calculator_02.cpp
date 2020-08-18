@@ -108,7 +108,7 @@ int main() {
 			std::cout << a << " * " << b << " = " << calculator_api_fptr_RR(std::move(a), std::move(a), op_mul);	// move 将左值转化成右值
 			break;
 		case 4:
-			std::cout << a << " / " << b << " = " << calculator_api_fptr_RR(std::move(a), std::move(a), op_div);	// 为什么是 1 不是 1.25
+			std::cout << a << " / " << b << " = " << calculator_api_fptr_RR(std::move(a), std::move(a), op_div);	// 为什么是 1 不是 1.25，因为是 a / a 啊
 			break;
 		default:
 			break;
