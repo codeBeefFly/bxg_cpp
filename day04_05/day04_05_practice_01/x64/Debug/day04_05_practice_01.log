@@ -1,0 +1,7 @@
+﻿  Calc.cpp
+D:\W_workPlace\bxg_cpp\day04_05\day04_05_practice_01\Calc.cpp(6,11): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+D:\W_workPlace\bxg_cpp\day04_05\day04_05_practice_01\Calc.cpp(11,11): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+D:\W_workPlace\bxg_cpp\day04_05\day04_05_practice_01\Calc.cpp(16,11): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+  simple_calculator_class.cpp
+  Generating Code...
+  day04_05_practice_01.vcxproj -> D:\W_workPlace\bxg_cpp\day04_05\build\x64\Debug\day04_05_practice_01.exe
