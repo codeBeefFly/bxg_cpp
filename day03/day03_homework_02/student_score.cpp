@@ -129,6 +129,13 @@ int main() {
 	}
 
 
+	// ÊÍ·Å
+	std::cout << "..release heap space...\n";
+	for (student* stu : *student_vector) {
+		delete stu;
+	}
+	std::cout << "..release heap space complete...\n";
+
 	 			 
 	return 0;
 }
