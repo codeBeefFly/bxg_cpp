@@ -20,3 +20,6 @@ add_executable(
 add_executable(
 	day04_05_special_function_delegate_constructor 
 	day04_05_practice_02/special_function_02.cpp)
+add_executable(
+	day04_05_special_function_deconstructor 
+	day04_05_practice_02/special_function_03.cpp)
