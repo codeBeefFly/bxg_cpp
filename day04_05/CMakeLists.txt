@@ -3,5 +3,20 @@ project(day04_05_homework)
 
 set(CMAKE_CXX_STANDARD 14)
 
-# 第一天作业
-add_executable(day04_05_simple_student_class day04_05_practice_00/simple_student_class.cpp)
+# 第四、五天练习
+add_executable(
+	day04_05_simple_student_class 
+	day04_05_practice_00/simple_student_class.cpp)
+add_executable(
+	day04_05_simple_calculator 
+	day04_05_practice_01/simple_calculator_class.cpp
+	day04_05_practice_01/Calc.cpp)
+add_executable(
+	day04_05_special_function_constructor 
+	day04_05_practice_02/special_function_00.cpp)
+add_executable(
+	day04_05_special_function_constructor_initialization_list 
+	day04_05_practice_02/special_function_01.cpp)
+add_executable(
+	day04_05_special_function_delegate_constructor 
+	day04_05_practice_02/special_function_02.cpp)
