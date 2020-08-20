@@ -26,7 +26,12 @@ add_executable(
 add_executable(
 	day04_05_special_function_copy_constructor 
 	day04_05_practice_02/special_function_04.cpp)
-
+add_executable(
+	day04_05_special_function_copy_constructor_02 
+	day04_05_practice_02/special_function_05.cpp)
+add_executable(
+	day04_05_special_function_deep_shallow_copy 
+	day04_05_practice_02/special_function_06.cpp)
 	
 # 第四、五天作业
 add_executable(
