@@ -3,6 +3,8 @@ project(day04_05_homework)
 
 set(CMAKE_CXX_STANDARD 14)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-elide-constructors")
+
 # 第四、五天练习
 add_executable(
 	day04_05_simple_student_class 
@@ -32,6 +34,9 @@ add_executable(
 add_executable(
 	day04_05_special_function_deep_shallow_copy 
 	day04_05_practice_02/special_function_06.cpp)
+add_executable(
+	day04_05_special_function_trigger
+	day04_05_practice_02/special_function_07.cpp)
 	
 # 第四、五天作业
 add_executable(
