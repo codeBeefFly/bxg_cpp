@@ -42,3 +42,6 @@ add_executable(
 add_executable(
 	day04_05_homework_student_class 
 	day04_05_homework_00/homework_student_class.cpp)
+add_executable(
+	day04_05_homework_student_class_01 
+	day04_05_homework_01/homework_student_class_01.cpp)
