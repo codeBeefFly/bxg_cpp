@@ -46,7 +46,9 @@ add_executable(
 add_executable(
 	day04_05_special_function_move_constructor_02
 	day04_05_practice_02/special_function_move_constructor_10.cpp)
-	
+add_executable(
+	day04_05_this_pointer
+	day04_05_practice_03/this_pointer.cpp)	
 	
 # 第四、五天作业
 add_executable(
