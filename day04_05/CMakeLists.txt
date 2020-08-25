@@ -60,3 +60,6 @@ add_executable(
 	day04_05_homework_student_class_01_correction 
 	day04_05_homework_01_correction/homework_student_class_01_correction.cpp
 	day04_05_homework_01_correction/Student.cpp)
+add_executable(
+	day04_05_homework_student_class_move_constructor 
+	day04_05_homework_02/student_class_move_constructor.cpp)
