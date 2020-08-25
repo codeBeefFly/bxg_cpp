@@ -37,6 +37,10 @@ add_executable(
 add_executable(
 	day04_05_special_function_trigger
 	day04_05_practice_02/special_function_07.cpp)
+add_executable(
+	day04_05_special_function_return_value
+	day04_05_practice_02/special_function_return_value_08.cpp)
+
 	
 # 第四、五天作业
 add_executable(
