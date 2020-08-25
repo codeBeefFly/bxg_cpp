@@ -49,6 +49,12 @@ add_executable(
 add_executable(
 	day04_05_this_pointer
 	day04_05_practice_03/this_pointer.cpp)	
+add_executable(
+	day04_05_friendly_function
+	day04_05_practice_04/friendly_function.cpp)	
+add_executable(
+	day04_05_friendly_class
+	day04_05_practice_04/friendly_class.cpp)
 	
 # 第四、五天作业
 add_executable(
@@ -65,3 +71,6 @@ add_executable(
 add_executable(
 	day04_05_homework_student_class_move_constructor 
 	day04_05_homework_02/student_class_move_constructor.cpp)
+add_executable(
+	day04_05_teacher_student_friend
+	day04_05_homework_03/teacher_student_friend.cpp)
