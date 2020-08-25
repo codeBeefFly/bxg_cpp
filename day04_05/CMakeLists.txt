@@ -3,7 +3,7 @@ project(day04_05_homework)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-elide-constructors")
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-elide-constructors")
 
 # 第四、五天练习
 add_executable(
@@ -40,7 +40,13 @@ add_executable(
 add_executable(
 	day04_05_special_function_return_value
 	day04_05_practice_02/special_function_return_value_08.cpp)
-
+add_executable(
+	day04_05_special_function_move_constructor
+	day04_05_practice_02/special_function_move_constructor_09.cpp)
+add_executable(
+	day04_05_special_function_move_constructor_02
+	day04_05_practice_02/special_function_move_constructor_10.cpp)
+	
 	
 # 第四、五天作业
 add_executable(
