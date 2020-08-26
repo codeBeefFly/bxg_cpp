@@ -33,6 +33,7 @@ public:
 		return this->age + stu.age;
 	}
 
+
 	//std::ostream& operator<<(std::ostream& out, std::vector<int>& scores) {
 	//	for (int score : scores) {
 	//		out << score << "\t";
@@ -49,7 +50,7 @@ int operator-(Student& stu1, Student& stu2) {	// 不发生拷贝用 &
 }
 
 
-// <<运算符重载，全局函数定义形式，两个参数都是引用传递，返回引用
+// <<运算符重载，全局函数定义形式，两个参数都是引用传递，返回引用，可以运行
 std::ostream& operator<<(std::ostream& out, std::vector<int>& scores) {
 	for (int score : scores) {
 		out << score << "\t";
@@ -58,6 +59,13 @@ std::ostream& operator<<(std::ostream& out, std::vector<int>& scores) {
 	return out;
 }
 
+// *运算符重载，全局函数定义形式
+Student operator*(Student& stu1, Student& stu2) {
+	Student stu3;
+	stu3.age = stu1.age * stu2.age;
+
+	return stu3;
+}
 
 int main() {
 
@@ -66,6 +74,9 @@ int main() {
 	Student s1(10), s2(20);
 	std::cout << "..学生 s1 与 s2 年龄总和 :: " << s1 + s2 << "\n";	// 使用运算符重载，类成员函数形式
 	std::cout << "..学生 s1 与 s2 年龄之差 :: " << s1 - s2 << "\n";	// 使用运算符重载，全局函数定义形式
+
+	Student s3 = s1 * s2;
+	std::cout << "..学生 s3 的年龄 = s1 的 * s2 的 :: " << s3.age << "\n";	// 使用运算符重载，全局函数定义形式
 
 	//std::cout << s1.scores << "\n";
 	
