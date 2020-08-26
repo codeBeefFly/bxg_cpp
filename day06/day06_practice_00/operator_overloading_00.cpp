@@ -11,12 +11,15 @@
 
 
 #include<iostream>
+#include<vector>
 
 class Student {
 
 public:
 
 	int age;
+
+	std::vector<int> scores{ 1, 2, 4, 8 };
 
 	Student() : Student(0) {
 		std::cout << "..无参构造函数...\n";
@@ -30,14 +33,29 @@ public:
 		return this->age + stu.age;
 	}
 
+	//std::ostream& operator<<(std::ostream& out, std::vector<int>& scores) {
+	//	for (int score : scores) {
+	//		out << score << "\t";
+	//	}
+	//	return out;
+	//}
+
 };
 
 
 // -运算符重载，全局函数定义形式
-int operator-(Student stu1, Student stu2) {
-
+int operator-(Student& stu1, Student& stu2) {	// 不发生拷贝用 &
 	return stu1.age - stu2.age;
+}
 
+
+// <<运算符重载，全局函数定义形式，两个参数都是引用传递，返回引用
+std::ostream& operator<<(std::ostream& out, std::vector<int>& scores) {
+	for (int score : scores) {
+		out << score << "\t";
+	}
+
+	return out;
 }
 
 
@@ -48,6 +66,12 @@ int main() {
 	Student s1(10), s2(20);
 	std::cout << "..学生 s1 与 s2 年龄总和 :: " << s1 + s2 << "\n";	// 使用运算符重载，类成员函数形式
 	std::cout << "..学生 s1 与 s2 年龄之差 :: " << s1 - s2 << "\n";	// 使用运算符重载，全局函数定义形式
+
+	//std::cout << s1.scores << "\n";
+	
+	std::vector<int> scores{ 1, 2, 4, 8 };
+	std::cout << scores << "\n";
+
 
 	return 0;
 }
