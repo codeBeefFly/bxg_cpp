@@ -8,5 +8,11 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(
 	day07_lambda_practice_00
 	day07_practice_00/day07_lambda_00.cpp)
+add_executable(
+	day07_lambda_practice_01
+	day07_practice_00/day07_lambda_01.cpp)
+add_executable(
+	day07_lambda_practice_02
+	day07_practice_00/day07_lambda_02.cpp)
 
 # homework
