@@ -15,3 +15,6 @@ add_executable(
 add_executable(
 	day06_operator_overloading_student_marks
 	day06_homework_01/student_marks_operator_overload.cpp)
+add_executable(
+	day06_operator_overloading_student_marks_correction
+	day06_homework_02/student_marks_operator_overload_correction.cpp)
