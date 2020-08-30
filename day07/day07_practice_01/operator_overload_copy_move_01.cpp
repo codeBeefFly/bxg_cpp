@@ -51,8 +51,8 @@ Student::Student(std::string name, int age)
 Student::~Student()
 {
 	std::cout << "..析构函数...\n";
-	//delete name;
-	//name = nullptr;
+	delete name;
+	name = nullptr;
 }
 
 
@@ -114,11 +114,26 @@ int main() {
 
 	std::cout << "..stu1.name::\t" << *stu1.name << ", stu1.age::\t" << stu1.age << ".\n";
 	//std::cout << "..stu2.name::\t" << *stu2.name << ", stu2.age::\t" << stu2.age << ".\n";
-	std::cout << "..stu3.name::\t" << *stu3.name << ", stu3.age::\t" << stu3.age << ".\n";
-
+	std::cout << "..stu3.name::\t" << *stu3.name << ", stu3.age::\t" << stu3.age << ".\n";		// *stu3.name 无法显示，因为空间已经释放
 
 
 	return 0;
-}
+}																												
 
 
+
+/*
+
+output:
+
+..in operator_overload_copy_move_01...
+..有参构造函数...
+..有参构造函数...
+..stu1.name::   jacob, stu1.age::       10.
+..stu3.name::   king, stu3.age::        30.
+..移动赋值运算符函数重载...
+..stu1.name::   king, stu1.age::        10.
+..stu3.name::
+
+
+*/
