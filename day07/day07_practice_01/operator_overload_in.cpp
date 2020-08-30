@@ -16,7 +16,7 @@
 class Student;
 
 std::istream& operator>>(std::istream& in, Student& stu);
-std::ostream& operator>>(std::ostream& out, Student& stu);
+std::ostream& operator<<(std::ostream& out, Student& stu);
 
 
 class Student{
@@ -33,7 +33,7 @@ public:
 
 };
 
-Student::Student()
+Student::Student() : Student("unknown", 0)
 {
 	std::cout << "..无参构造...\n";
 }
