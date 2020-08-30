@@ -19,5 +19,9 @@ add_executable(
 	day07_operator_overload_out.cpp
 	day07_practice_01/operator_overload_out.cpp
 )
+add_executable(
+	day07_operator_overload_in.cpp
+	day07_practice_01/operator_overload_in.cpp
+)
 
 # homework
