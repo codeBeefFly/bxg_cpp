@@ -31,5 +31,10 @@ add_executable(
 	day07_operator_overload_copy_move_01.cpp
 	day07_practice_01/operator_overload_copy_move_01.cpp
 )
+add_executable(
+	day07_operator_overload_bracket.cpp
+	day07_practice_01/operator_overload_bracket.cpp
+)
+
 
 # homework
