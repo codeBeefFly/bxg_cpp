@@ -64,7 +64,10 @@ add_executable(
 	day07_inherit_constructor_deconstructor
 	day07_practice_02_inherit/inherit_constructor_deconstructor.cpp
 )
-
+add_executable(
+	day07_inherit_combined
+	day07_practice_02_inherit/inherit_combined.cpp
+)
 
 
 # homework
