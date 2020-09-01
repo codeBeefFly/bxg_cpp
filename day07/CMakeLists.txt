@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(day07_lambda_opOverload)
+project(day07_lambda_opOverload_inherit)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -30,25 +30,37 @@ add_executable(
 
 # practice_operator_overload	
 add_executable(
-	day07_operator_overload_out.cpp
+	day07_operator_overload_out
 	day07_practice_01/operator_overload_out.cpp
 )
 add_executable(
-	day07_operator_overload_in.cpp
+	day07_operator_overload_in
 	day07_practice_01/operator_overload_in.cpp
 )
 add_executable(
-	day07_operator_overload_copy_move.cpp
+	day07_operator_overload_copy_move
 	day07_practice_01/operator_overload_copy_move.cpp
 )
 add_executable(
-	day07_operator_overload_copy_move_01.cpp
+	day07_operator_overload_copy_move_01
 	day07_practice_01/operator_overload_copy_move_01.cpp
 )
 add_executable(
-	day07_operator_overload_bracket.cpp
+	day07_operator_overload_bracket
 	day07_practice_01/operator_overload_bracket.cpp
 )
+
+
+# practice_inherit
+add_executable(
+	day07_inherit_simple
+	day07_practice_02_inherit/inherit_simple.cpp
+)
+add_executable(
+	day07_inherit_simple_plus
+	day07_practice_02_inherit/inherit_simple_plus.cpp
+)
+
 
 
 # homework
