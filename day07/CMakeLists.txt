@@ -76,6 +76,17 @@ add_executable(
 	day07_inherit_object_in_class
 	day07_practice_02_inherit/inherit_object_in_class.cpp
 )
-
+add_executable(
+	day07_inherit_father_method_rewritten
+	day07_practice_02_inherit/inherit_father_method_rewritten.cpp
+)
+add_executable(
+	day07_inherit_multiple
+	day07_practice_02_inherit/inherit_multiple.cpp
+)
+add_executable(
+	day07_inherit_pre_declare
+	day07_practice_02_inherit/inherit_pre_declare.cpp
+)
 
 # homework
