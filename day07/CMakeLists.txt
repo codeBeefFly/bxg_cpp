@@ -68,6 +68,14 @@ add_executable(
 	day07_inherit_combined
 	day07_practice_02_inherit/inherit_combined.cpp
 )
+add_executable(
+	day07_inherit_invoke_father_constructor
+	day07_practice_02_inherit/inherit_invoke_father_constructor.cpp
+)
+add_executable(
+	day07_inherit_object_in_class
+	day07_practice_02_inherit/inherit_object_in_class.cpp
+)
 
 
 # homework
