@@ -1,0 +1,39 @@
+cmake_minimum_required(VERSION 3.15)
+
+project(day08_compilation)
+
+set(CMAKE_CXX_STANDARD 14)
+
+# prarctice compilation
+add_executable(
+	day08_compilation_static_polymorphism
+	day08_dynamic/compilation_static_polymorphism.cpp
+)
+add_executable(
+	day08_compilation_dynamic_polymorphism
+	day08_dynamic/compilation_dynamic_polymorphism.cpp
+)
+add_executable(
+	day08_compilation_father_ptr_2_child
+	day08_dynamic/compilation_father_ptr_2_child.cpp
+)
+add_executable(
+	day08_compilation_static_dynamic_inherit
+	day08_dynamic/compilation_static_dynamic_inherit.cpp
+)
+add_executable(
+	day08_compilation_father_son_same_name_fun
+	day08_dynamic/compilation_father_son_same_name_fun.cpp
+)
+add_executable(
+	day08_compilation_joint_static_dynamic
+	day08_dynamic/compilation_joint_static_dynamic.cpp
+)
+add_executable(
+	day08_practice_fish_compilation_compilation_join
+	day08_dynamic/practice_fish_compilation_compilation_join.cpp
+)
+
+
+# homework
+
