@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(day08_compilation)
+project(day08_compilation_virtualFunction)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -35,5 +35,12 @@ add_executable(
 )
 
 
-# homework
-
+# practice virtual_function
+add_executable(
+	day08_virtual_function_simple
+	day08_virtual_function/virtual_function_simple.cpp
+)
+add_executable(
+	day08_virtual_function_simple_plus
+	day08_virtual_function/virtual_function_simple_plus.cpp
+)
