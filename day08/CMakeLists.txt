@@ -44,3 +44,35 @@ add_executable(
 	day08_virtual_function_simple_plus
 	day08_virtual_function/virtual_function_simple_plus.cpp
 )
+add_executable(
+	day08_virtual_function_virtual_deconstructor
+	day08_virtual_function/virtual_function_virtual_deconstructor.cpp
+)
+add_executable(
+	day08_virtual_function_practice_virtual_eat
+	day08_virtual_function/virtual_function_practice_virtual_eat.cpp
+)
+add_executable(
+	day08_virtual_function_override
+	day08_virtual_function/virtual_function_override.cpp
+)
+add_executable(
+	day08_virtual_function_final
+	day08_virtual_function/virtual_function_final.cpp
+)
+add_executable(
+	day08_virtual_function_delete
+	day08_virtual_function/virtual_function_delete.cpp
+)
+add_executable(
+	day08_virtual_function_default
+	day08_virtual_function/virtual_function_default.cpp
+)
+add_executable(
+	day08_virtual_function_pure_virtual
+	day08_virtual_function/virtual_function_pure_virtual.cpp
+)
+add_executable(
+	day08_virtual_function_pure_virtual_2
+	day08_virtual_function/virtual_function_pure_virtual_2.cpp
+)
