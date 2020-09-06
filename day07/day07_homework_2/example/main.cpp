@@ -122,6 +122,18 @@ int main() {
         }
     });
 
+
+
+    //  Õ∑≈ø’º‰
+    for (teacher* teacher : teacher_vector) {
+        delete teacher;
+    }
+
+    //for (stu student : stu_vector) {
+    //    delete student;
+    //}
+
+
     return 0;
 }
 

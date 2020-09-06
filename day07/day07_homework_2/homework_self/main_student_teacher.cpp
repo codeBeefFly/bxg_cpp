@@ -141,6 +141,15 @@ int main() {
     );
 
 
+    // 释放空间
+    for (Teacher* teacher : tec_vector) {
+        delete teacher;
+    }
+
+    for (Student* student : stu_vector) {
+        delete student;
+    }
+
     return 0;
 
 }
@@ -233,7 +242,11 @@ void initStu(std::vector<Student*>& stu_vector, std::vector<Teacher*>& tec_vecto
         
         // 绑定学生老师
         //stu_vector[i]->teacher = tec_vector[i];
-        student->teacher = tec_vector[i];
+        //student->teacher = tec_vector[i];   // 这样写 学生类中的老师指针指向老师类指针，在delete时就不用delete 老师指针对象
+
+        student->teacher = new Teacher(*tec_vector[i]);
+
+
 
         stu_vector.push_back(student);
     }
@@ -262,3 +275,33 @@ void printStu(std::vector<Student*>& stu_vector, void (*print)(std::vector<Stude
     print(stu_vector);
 
 }
+
+
+/*
+
+output
+
+
+..in main_student_teacher...
+..输入教师的 姓名，年龄，课程:: a 1 aa
+..输入教师的 姓名，年龄，课程:: b 2 bb
+..输入教师的 姓名，年龄，课程:: c 3 cc
+..输入学生的姓名，id::  sa 10086
+..输入学生的姓名，id::  sb 10087
+..输入学生的姓名，id::  sc 10088
+..学生姓名::    sa      ..学生id::      10086   ..学生课程::    aa
+..学生姓名::    sb      ..学生id::      10087   ..学生课程::    bb
+..学生姓名::    sc      ..学生id::      10088   ..学生课程::    cc
+..id 不符合...
+..id 不符合...
+..学生姓名::    sa      ..学生id::      10086   ..学生课程::    aa
+..学生姓名::    sb      ..学生id::      10087   ..学生课程::    bb
+..学生姓名::    sc      ..学生id::      10088   ..学生课程::    高等数学
+..log::Student 析构函数...
+..log::Teacher 的析构函数...
+..log::Student 析构函数...
+..log::Teacher 的析构函数...
+..log::Student 析构函数...
+..log::Teacher 的析构函数...
+
+*/
