@@ -99,6 +99,23 @@ int main() {
     // 初始化学生
     initStu(stu_vector, tec_vector);
 
+    // 打印学生
+    printStu(
+        stu_vector,
+        [](std::vector<Student*>& stu_vector) {
+
+            //for (Student* stu : stu_vector) {
+            //    std::cout << "..学生姓名::\t" << stu->name
+            //        << ",\n..id::\t" << stu->id
+            //        << ",\n..老师::\t" << stu->teacher;
+            //}
+
+            for (Student* stu : stu_vector) {
+                std::cout << *stu << "\n";
+            }
+        }
+    );
+
 
     // 更新学生
     std::string id = "10088";
@@ -118,7 +135,7 @@ int main() {
             //}
 
             for (Student* stu : stu_vector) {
-                std::cout << *stu;
+                std::cout << *stu << "\n";
             }
         }
     );
@@ -169,8 +186,8 @@ std::ostream& operator<<(std::ostream& out, Student& student) {
     //    << "..学生课程::\t" << student->teacher->subject;
 
     out << "..学生姓名::\t" << student.name
-        << "..学生id::\t" << student.id
-        << "..学生课程::\t" << student.teacher->subject;
+        << "\t..学生id::\t" << student.id
+        << "\t..学生课程::\t" << student.teacher->subject;
 
     return out;
 
@@ -189,11 +206,11 @@ std::istream& operator>>(std::istream& in, Student* student) {
 
 void initTeacher(std::vector<Teacher*>& tec_vector) {
 
-    // 给对象开辟空间，在堆中
-
-    Teacher* teacher = new Teacher();
     
     for (int i = 0; i < 3; i++) {
+        // 给对象开辟空间，在堆中
+        Teacher* teacher = new Teacher();
+        
         std::cout << "..输入教师的 姓名，年龄，课程::\t";
         //std::cin >> teacher->name >> teacher->age >> teacher->subject;
         std::cin >> teacher;
@@ -206,10 +223,11 @@ void initTeacher(std::vector<Teacher*>& tec_vector) {
 
 void initStu(std::vector<Student*>& stu_vector, std::vector<Teacher*>& tec_vector) {
 
-    // 给对象开辟空间，在堆中
-    Student* student = new Student();
 
     for (int i = 0; i < 3; i++) {
+        // 给对象开辟空间，在堆中
+        Student* student = new Student();
+
         std::cout << "..输入学生的姓名，id::\t";
         std::cin >> student;
         
@@ -229,6 +247,9 @@ void updateStu(std::vector<Student*>& stu_vector, std::string& id, std::string& 
         if (stu->id == id) {
             stu->teacher->subject = new_subject;
             break;
+        }
+        else {
+            std::cout << "..id 不符合...\n";
         }
     }
 
