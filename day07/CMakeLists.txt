@@ -90,3 +90,30 @@ add_executable(
 )
 
 # homework
+add_executable(
+	day07_homework_compare_lambda
+	day07_homework/day07_homework_compare_lambda.cpp
+)
+add_executable(
+	day07_homework_compare_lambda_ex
+	day07_homework/day07_homework_compare_lambda_ex.cpp
+)
+
+# include_directories(./day07_homework_2/example)	# 加了这个以后会在 external dependency 中显示 .h 文件
+add_executable(
+	day07_homework_teacher_student_ex
+	day07_homework_2/example/main.cpp
+	day07_homework_2/example/stu.cpp
+	day07_homework_2/example/teacher.cpp
+	day07_homework_2/example/stu.h			# 加了这两个，会在当前项目中的header文件夹中显示 .h 文件
+	day07_homework_2/example/teacher.h
+)
+add_executable(
+	day07_homework_teacher_student
+	day07_homework_2/homework_self/main_student_teacher.cpp
+	day07_homework_2/homework_self/student.cpp
+	day07_homework_2/homework_self/teacher.cpp
+	day07_homework_2/homework_self/student.h			# 加了这两个，会在当前项目中的header文件夹中显示 .h 文件
+	day07_homework_2/homework_self/teacher.h
+)
+
