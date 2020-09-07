@@ -76,3 +76,7 @@ add_executable(
 	day08_virtual_function_pure_virtual_2
 	day08_virtual_function/virtual_function_pure_virtual_2.cpp
 )
+add_executable(
+	day08_virtual_function_geometry
+	day08_virtual_function/virtual_function_practice_geometry.cpp
+)
