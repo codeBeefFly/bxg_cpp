@@ -27,3 +27,15 @@ add_executable(
 	day09_smart_pointer_3_1_shared_ptr
 	day09_smart_pointer/smart_pointer_3_1_shared_ptr.cpp
 )
+add_executable(
+	day09_smart_pointer_4_teacher_student_ex
+	day09_smart_pointer/smart_pointer_4_teacher_student_ex.cpp
+)
+add_executable(
+	day09_smart_pointer_4_teacher_student
+	day09_smart_pointer/smart_pointer_4_teacher_student.cpp
+)
+add_executable(
+	day09_smart_pointer_4_teacher_student_s_w
+	day09_smart_pointer/smart_pointer_4_teacher_student_s_w.cpp
+)
