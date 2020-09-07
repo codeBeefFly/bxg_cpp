@@ -19,3 +19,11 @@ add_executable(
 	day09_smart_pointer_2
 	day09_smart_pointer/smart_pointer_2.cpp
 )
+add_executable(
+	day09_smart_pointer_3
+	day09_smart_pointer/smart_pointer_3.cpp
+)
+add_executable(
+	day09_smart_pointer_3_1_shared_ptr
+	day09_smart_pointer/smart_pointer_3_1_shared_ptr.cpp
+)
