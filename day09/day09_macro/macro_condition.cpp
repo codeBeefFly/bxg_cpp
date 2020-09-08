@@ -26,7 +26,9 @@ int main() {
 #endif // PI
 
 #ifndef PI_2
+#define PI_2 3.1416
 	std::cout << "..PI2 not defined...\n";
+	std::cout << "..after define PI2 = " << PI_2 << "\n";
 #endif // !PI_2
 
 
