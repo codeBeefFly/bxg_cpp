@@ -39,3 +39,16 @@ add_executable(
 	day09_smart_pointer_4_teacher_student_s_w
 	day09_smart_pointer/smart_pointer_4_teacher_student_s_w.cpp
 )
+
+# practice dynamic memory allocation
+
+
+# practice macro
+add_executable(
+	day09_macro_variable
+	day09_macro/macro_variable.cpp
+)
+add_executable(
+	day09_macro_condition
+	day09_macro/macro_condition.cpp
+)
