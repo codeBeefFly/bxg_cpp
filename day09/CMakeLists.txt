@@ -70,3 +70,21 @@ add_executable(
 	day09_enumerator_practice
 	day09_enum/day09_enum_practice.cpp
 )
+
+# practice exception
+add_executable(
+	day09_exception_00
+	day09_exception/day09_exception_00.cpp
+)
+add_executable(
+	day09_exception_01
+	day09_exception/day09_exception_01.cpp
+)
+add_executable(
+	day09_exception_02
+	day09_exception/day09_exception_02.cpp
+)
+add_executable(
+	day09_exception_03
+	day09_exception/day09_exception_03.cpp
+)
