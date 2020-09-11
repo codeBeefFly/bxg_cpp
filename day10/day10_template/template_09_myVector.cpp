@@ -54,6 +54,14 @@ int main() {
     my_vector<string> mv;
     mv.push_back("aa");
 
+    try {
+        int a = 3 / 0;
+    }
+    catch (exception e) {
+        std::cout << "..here...\n";
+    }
+
+    std::cout << "hello\n" << "...\n";
 
     return 0;
 }
