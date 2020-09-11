@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(day10_template)
+project(day10_template_io)
 
 
 # practice template
@@ -55,4 +55,39 @@ add_executable(
 add_executable(
 	day10_template_09_myVector
 	day10_template/template_09_myVector.cpp
+)
+
+
+# practice IO
+add_executable(
+	day10_io_00_base
+	day10_io/day10_base.cpp
+)
+add_executable(
+	day10_io_01_precision_ws
+	day10_io/day10_io_precision_ws.cpp
+)
+add_executable(
+	day10_io_02_istringstream
+	day10_io/day10_io_istringstream.cpp
+)
+add_executable(
+	day10_io_03_ostringstream
+	day10_io/day10_io_ostringstream.cpp
+)
+add_executable(
+	day10_io_04_basic_io
+	day10_io/day10_io_basic_io.cpp
+)
+add_executable(
+	day10_io_05_basic_fread
+	day10_io/day10_io_basic_fread.cpp
+)
+add_executable(
+	day10_io_06_basic_fread_line
+	day10_io/day10_io_basic_fread_line.cpp
+)
+add_executable(
+	day10_io_06_basic_fread_matrix
+	day10_io/day10_io_basic_fread_matrix.cpp
 )
