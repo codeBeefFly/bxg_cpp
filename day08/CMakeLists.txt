@@ -80,3 +80,9 @@ add_executable(
 	day08_virtual_function_geometry
 	day08_virtual_function/virtual_function_practice_geometry.cpp
 )
+
+# homework
+add_executable(
+	day08_homework_02_teacher_student_vector
+	day08_homework/homework_02/teacher_student_vector.cpp
+)
