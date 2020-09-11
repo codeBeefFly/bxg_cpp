@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(day09_smartPointer)
+project(day09_smartPointer_macro_enum)
 
 # practice smart pointer
 add_executable(
@@ -40,7 +40,7 @@ add_executable(
 	day09_smart_pointer/smart_pointer_4_teacher_student_s_w.cpp
 )
 
-# practice dynamic memory allocation
+# practice dynamic memory allocation, TODO
 
 
 # practice macro
@@ -51,4 +51,22 @@ add_executable(
 add_executable(
 	day09_macro_condition
 	day09_macro/macro_condition.cpp
+)
+
+# practice enumerator
+add_executable(
+	day09_enumerator_class
+	day09_enum/day09_enum_class_00.cpp
+)
+add_executable(
+	day09_enumerator_class_01
+	day09_enum/day09_enum_class_01.cpp
+)
+add_executable(
+	day09_enumerator_class_02
+	day09_enum/day09_enum_class_02.cpp
+)
+add_executable(
+	day09_enumerator_practice
+	day09_enum/day09_enum_practice.cpp
 )
