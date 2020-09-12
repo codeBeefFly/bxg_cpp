@@ -88,6 +88,30 @@ add_executable(
 	day10_io/day10_io_basic_fread_line.cpp
 )
 add_executable(
-	day10_io_06_basic_fread_matrix
+	day10_io_07_basic_fread_matrix
 	day10_io/day10_io_basic_fread_matrix.cpp
+)
+add_executable(
+	day10_io_08_basic_fread_matrix_dot
+	day10_io/day10_io_basic_fread_matrix_dot.cpp
+)
+add_executable(
+	day10_io_09_basic_fread_matrix_dot_ex
+	day10_io/day10_io_basic_fread_matrix_dot_ex.cpp
+)
+add_executable(
+	day10_io_10_basic_fread_matrix_dot_simple
+	day10_io/day10_io_basic_fread_matrix_dot_simple.cpp
+)
+add_executable(
+	day10_io_11_basic_fread_matrix_dot_2
+	day10_io/day10_io_basic_fread_matrix_dot_2.cpp
+)
+add_executable(
+	day10_io_12_basic_fwrite_simple
+	day10_io/day10_io_basic_fwrite_simple.cpp
+)
+add_executable(
+	day10_io_13_basic_fwrite_matrix
+	day10_io/day10_io_basic_fwrite_matrix.cpp
 )
