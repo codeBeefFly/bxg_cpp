@@ -88,3 +88,33 @@ add_executable(
 	day09_exception_03
 	day09_exception/day09_exception_03.cpp
 )
+
+# homework human teacher student
+add_executable(
+	day09_homework_student_teacher
+	day09_homework/day09_student_teacher_main.cpp
+	day09_homework/Teacher.cpp
+	day09_homework/Teacher.h
+	day09_homework/Student.cpp
+	day09_homework/Student.h
+	day09_homework/Human.h
+)
+add_executable(
+	day09_homework_student_teacher_ex
+	day09_homework_2/main.cpp
+	day09_homework_2/Student.cpp
+	day09_homework_2/Student.h
+	day09_homework_2/Teacher.cpp
+	day09_homework_2/Teacher.h
+	day09_homework_2/Human.h
+)
+
+add_executable(
+	day09_homework_student_teacher_ex_2
+	day09_homework_3/main.cpp
+	day09_homework_3/stu.cpp
+	day09_homework_3/stu.h
+	day09_homework_3/teacher.cpp
+	day09_homework_3/teacher.h
+	day09_homework_3/human.h
+)
