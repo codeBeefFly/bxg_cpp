@@ -19,3 +19,27 @@ add_executable(
 	day12_concurrency_03_unique_lock
 	day12_thread_concurrency/day12_concurrency_03_unique_lock.cpp	
 )
+add_executable(
+	day12_concurrency_04_condition_variable
+	day12_thread_concurrency/day12_concurrency_04_condition_variable.cpp	
+)
+add_executable(
+	day12_concurrency_05_condition_variable_self
+	day12_thread_concurrency/day12_concurrency_05_condition_variable_self.cpp	
+)
+add_executable(
+	day12_concurrency_06_condition_variable_simple_arm
+	day12_thread_concurrency/day12_concurrency_06_condition_variable_simple_arm.cpp	
+)
+add_executable(
+	day12_concurrency_07_condition_variable_simple_arm_self
+	day12_thread_concurrency/day12_concurrency_07_condition_variable_simple_arm_self.cpp	
+)
+add_executable(
+	day12_concurrency_08_condition_variable_arm
+	day12_thread_concurrency/day12_concurrency_08_condition_variable_arm.cpp	
+)
+add_executable(
+	day12_concurrency_08_condition_variable_arm_self
+	day12_thread_concurrency/day12_concurrency_09_condition_variable_arm_self.cpp	
+)
