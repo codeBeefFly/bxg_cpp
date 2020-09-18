@@ -51,3 +51,11 @@ add_executable(
 	day12_concurrency_11_condition_variable_arm_OOD_self
 	day12_thread_concurrency/day12_concurrency_11_condition_variable_arm_OOD_self.cpp	
 )
+add_executable(
+	day12_concurrency_12_async_simple
+	day12_thread_concurrency/day12_concurrency_12_async_simple.cpp	
+)
+add_executable(
+	day12_concurrency_13_async_simple_2
+	day12_thread_concurrency/day12_concurrency_13_async_simple_2.cpp	
+)
