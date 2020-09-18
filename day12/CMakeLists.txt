@@ -40,6 +40,14 @@ add_executable(
 	day12_thread_concurrency/day12_concurrency_08_condition_variable_arm.cpp	
 )
 add_executable(
-	day12_concurrency_08_condition_variable_arm_self
+	day12_concurrency_09_condition_variable_arm_self
 	day12_thread_concurrency/day12_concurrency_09_condition_variable_arm_self.cpp	
+)
+add_executable(
+	day12_concurrency_10_condition_variable_arm_OOD
+	day12_thread_concurrency/day12_concurrency_10_condition_variable_arm_OOD.cpp	
+)
+add_executable(
+	day12_concurrency_11_condition_variable_arm_OOD_self
+	day12_thread_concurrency/day12_concurrency_11_condition_variable_arm_OOD_self.cpp	
 )
