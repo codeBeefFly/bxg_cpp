@@ -98,3 +98,13 @@ add_executable(
 	day11_thread_04_mutex
 	day11_thread/day11_thread_04_mutex.cpp
 )
+
+# day11 homework
+add_executable(
+	day11_homework_getMoneyInBank
+	day11_homework/day11_homework_getMoneyInBank.cpp
+)
+add_executable(
+	day11_homework_getMoneyInBank_self
+	day11_homework/day11_homework_getMoneyInBank_self.cpp
+)
