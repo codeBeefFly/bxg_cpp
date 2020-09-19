@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(day12_threadConcurrency)
+project(day12_threadConcurrency_singleton)
 
 # practice concurrency
 add_executable(
@@ -58,4 +58,47 @@ add_executable(
 add_executable(
 	day12_concurrency_13_async_simple_2
 	day12_thread_concurrency/day12_concurrency_13_async_simple_2.cpp	
+)
+
+
+# practice design mode
+add_executable(
+	day12_designMode_singleton_lazy
+	day12_design_mode/day12_singleton_lazy.cpp
+)
+add_executable(
+	day12_designMode_singleton_lazy_self
+	day12_design_mode/day12_singleton_lazy_self.cpp
+)
+add_executable(
+	day12_designMode_singleton_hungry
+	day12_design_mode/day12_singleton_hungry.cpp
+)
+add_executable(
+	day12_designMode_singleton_hungry_self
+	day12_design_mode/day12_singleton_hungry_self.cpp
+)
+add_executable(
+	day12_designMode_singleton_lazy_problem
+	day12_design_mode/day12_singleton_lazy_problem.cpp
+)
+add_executable(
+	day12_designMode_singleton_lazy_problem_self
+	day12_design_mode/day12_singleton_lazy_problem_self.cpp
+)
+add_executable(
+	day12_designMode_singleton_lazy_problem_self_2
+	day12_design_mode/day12_singleton_lazy_problem_self_2.cpp
+)
+add_executable(
+	day12_designMode_singleton_lazy_problem_self_3
+	day12_design_mode/day12_singleton_lazy_problem_self_3.cpp
+)
+add_executable(
+	day12_designMode_singleton_lazy_problem_2
+	day12_design_mode/day12_singleton_lazy_problem_2.cpp
+)
+add_executable(
+	day12_designMode_singleton_lazy_problem_2_self
+	day12_design_mode/day12_singleton_lazy_problem_2_self.cpp
 )
