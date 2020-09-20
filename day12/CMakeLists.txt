@@ -102,3 +102,40 @@ add_executable(
 	day12_designMode_singleton_lazy_problem_2_self
 	day12_design_mode/day12_singleton_lazy_problem_2_self.cpp
 )
+add_executable(
+	day12_designMode_observer_simple
+	day12_design_mode/day12_observer_simple.cpp
+)
+add_executable(
+	day12_designMode_observer_simple_self
+	day12_design_mode/day12_observer_simple_self.cpp
+)
+add_executable(
+	day12_designMode_observer_simple_ptr_self
+	day12_design_mode/day12_observer_simple_ptr_self.cpp
+)
+add_executable(
+	day12_designMode_observer_setBoth_ptr_self
+	day12_design_mode/day12_observer_setBoth_ptr_self.cpp
+)
+add_executable(
+	day12_designMode_observer_setBoth_1S_mO_ptr_self
+	day12_design_mode/day12_observer_setBoth_1S_mO_ptr_self.cpp
+)
+add_executable(
+	day12_designMode_observer_classRoomExample
+	day12_design_mode/day12_observer_classRoomExample.cpp
+)
+add_executable(
+	day12_designMode_observer_classRoomExample_self
+	day12_design_mode/day12_observer_classRoomExample_self.cpp
+)
+add_executable(
+	day12_designMode_observer_classRoomExample_2
+	day12_design_mode/day12_observer_classRoomExample_2.cpp
+)
+add_executable(
+	day12_designMode_observer_classRoomExample_2_self
+	day12_design_mode/day12_observer_classRoomExample_2_self.cpp
+)
+
