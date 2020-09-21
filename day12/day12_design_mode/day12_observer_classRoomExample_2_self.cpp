@@ -29,14 +29,16 @@
 class Subject;
 class Observer;
 
-
 class Subject {
 
 public:
 
 	Subject() = default;
 
-	~Subject() = default;
+	// 父类析构必须是虚函数，父类指针接收子类对象，删除的是子类对象，调用的是子类析构
+	//~Subject() = default;
+	// 虚函数（非纯虚函数）要写 default
+	virtual ~Subject() = default;		
 
 	virtual void addObserver(Observer* ob) = 0;
 
@@ -53,7 +55,10 @@ public:
 
 	Observer() = default;
 
-	~Observer() = default;
+	// 父类析构必须是虚函数，父类指针接收子类对象，删除的是子类对象，调用的是子类虚构
+	//~Observer() = default;
+	// 虚函数（非纯虚函数）要写default
+	virtual ~Observer() = default;
 
 	virtual void addSubject(Subject* sub) = 0;
 
@@ -77,6 +82,8 @@ private:
 public:
 
 	Monitor(std::string name) : name{ name } {}
+
+	~Monitor() = default;
 
 	void addObserver(Observer* ob) override {
 		//this->ob_vector;
@@ -125,6 +132,8 @@ public:
 
 	ZS(std::string name) : name{ name } {}
 
+	~ZS() = default;
+
 	void addSubject(Subject* sub) override {
 		this->sub = sub;
 	}
@@ -155,6 +164,8 @@ public:
 
 	WW(std::string name) : name{ name } {}
 
+	~WW() = default;
+
 	void addSubject(Subject* sub) override {
 		this->sub = sub;
 	}
@@ -184,6 +195,8 @@ private:
 public:
 
 	LS(std::string name) : name{ name } {}
+
+	~LS() = default;
 
 	void addSubject(Subject* sub) override {
 		this->sub = sub;
