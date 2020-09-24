@@ -1,0 +1,1 @@
+add_executable(demo06 day12_observer_setBoth_ptr_self.cpp)

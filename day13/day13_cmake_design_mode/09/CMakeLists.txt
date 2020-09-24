@@ -1,0 +1,1 @@
+add_executable(demo09 day12_singleton_lazy_self.cpp)

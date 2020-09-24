@@ -1,0 +1,1 @@
+add_executable(demo07 day12_observer_simple.cpp)

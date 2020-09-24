@@ -3,6 +3,6 @@ demo	: stu.o test.o
 stu.o	: stu.cpp
 test.o	: test.cpp
 
-clean	: 
-	del /Q /S stu.o test.o
 .PHONY	: clean
+clean	: 
+	del test.o
