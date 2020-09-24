@@ -1,1 +1,0 @@
-add_executable(demo08 day12_singleton_lazy_problem_self_3.cpp)

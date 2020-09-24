@@ -1,1 +1,0 @@
-add_executable(demo01 day12_observer_classRoomExample.cpp)
